@@ -1,0 +1,10 @@
+
+<p>firstName: <input type="text" placeholder="Enter First Name" [(ngModel)]="user.firstName"></p>
+<p>Last Name: <input type="text" placeholder="Enter Last Name" [(ngModel)]="user.lastName"></p>
+<p>Email-ID: <input type="text" placeholder="Enter Email-ID" [(ngModel)]="user.emailID"></p>
+<p>Contact Number: <input type="number" placeholder="Enter Mobile Number" [(ngModel)]="user.contactNumber" ></p>
+<p>Date of Birth: <input type="datetime-local" [(ngModel)]="user.dateOfBirth"></p>
+<p>Username: <input type="text" #username></p>
+<p>Password: <input type="password" #password></p>
+<p><button (click)="registerUsers(username.value,password.value)">Register</button></p>
+

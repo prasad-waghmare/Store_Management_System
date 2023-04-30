@@ -1,0 +1,25 @@
+<h4>Order Summery</h4>
+
+<table border="1">
+  <tr>
+    <td>SN</td>
+    <td>UserName</td>
+    <td>ProductName</td>
+    <td>Quantity</td>
+    <td>Price</td>
+    <td>ContactNumber</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let buyProduct of allBuyProductList ; let i=index">
+    <td>{{i+1}}</td>
+    <td>{{buyProduct.firstName}}</td>
+    <td>{{buyProduct.productName}}</td>
+    <td>{{buyProduct.quantity}}</td>
+    <td>{{buyProduct.price}}</td>
+    <td>{{buyProduct.contactNumber}}</td>
+    <td>
+      <button>Approve</button>
+    </td>
+  </tr>
+
+</table>

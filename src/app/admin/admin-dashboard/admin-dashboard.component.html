@@ -1,0 +1,16 @@
+<h2>Welcome Admin {{this.service.getData().firstName}}</h2>
+<button (click)="whatToShow(1)">addProduct</button>
+<button (click)="whatToShow(2)">showProducts</button>
+<button (click)="whatToShow(3)">Buy Details</button>
+
+<div *ngIf="isShow==1">
+  <app-add-product></app-add-product>
+</div>
+
+<div *ngIf="isShow==2">
+  <app-show-products></app-show-products>
+</div>
+
+<div *ngIf="isShow==3">
+  <app-buydetails></app-buydetails>
+</div>

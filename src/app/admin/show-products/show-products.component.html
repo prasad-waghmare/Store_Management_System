@@ -1,0 +1,22 @@
+<h3>List Of Products</h3>
+
+<table border="1">
+  <tr>
+    <td>SN</td>
+    <td>Product Name</td>
+    <td>Quantity</td>
+    <td>Price</td>
+    <td>ExpDate</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let product of allProduct; let i=index">
+    <td>{{i+1}}</td>
+    <td>{{product.productName}}</td>
+    <td>{{product.quantity}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.expDate | date}}</td>
+    <td>
+      <button>Delete</button>
+    </td>
+  </tr>
+</table>

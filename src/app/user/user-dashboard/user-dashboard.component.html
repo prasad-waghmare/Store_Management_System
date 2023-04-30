@@ -1,0 +1,33 @@
+<h2>Welcome User {{this.service.getData().firstName}}</h2>
+<button (click)="getAllProduct(1)">All Products</button>
+
+
+
+<div *ngIf="isShow==1">
+  <button (click)="Refresh()">Refresh</button><br>
+  <h3>All Products</h3><br>
+  <table border="1">
+    <tr>
+      <td>SN</td>
+      <td>ProductName</td>
+      <td>ExpDate</td>
+      <td>Quantity</td>
+      <td>Price</td>
+      <td>Action</td>
+    </tr>
+    <tr *ngFor="let product of allProducts; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{product.productName}}</td>
+      <td>{{product.expDate}}</td>
+      <td>{{product.quantity}}</td>
+      <td>{{product.price}}</td>
+      <td>
+        <input type="number" #UIQuantity>
+        <button (click)="buy(UIQuantity.value,product.quantity,product.id)">BUY</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+

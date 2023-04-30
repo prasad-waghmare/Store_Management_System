@@ -1,0 +1,13 @@
+<h1>WELCOME</h1>
+
+<button (click)="Show(1)">Login</button>
+<button (click)="Show(2)">Registration</button>
+
+
+<div *ngIf="isShow==1">
+  <app-user-login></app-user-login>
+</div>
+
+<div *ngIf="isShow==2">
+  <app-user-registration></app-user-registration>
+</div>
